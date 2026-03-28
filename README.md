@@ -13,7 +13,7 @@ HSLIT tokenises the lease income rights derived from airport landing slots at Lo
 - **Total supply:** 3,750,000 HSLIT (fixed at deployment)
 - **Standard:** ERC-20 (OpenZeppelin)
 - **Network:** Ethereum Sepolia Testnet
-- **Contract address:** `0xD0Aa30C74D3E2847Ddde3a163A3c53537a7040e9`
+- **Contract address:** `0xA305b6adbEe706253A900a175ba9f483801dD116`
 
 ## Key Functions
 
