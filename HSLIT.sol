@@ -7,14 +7,12 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 /// @title Heathrow Slot Lease Income Token (HSLIT)
 /// @notice ERC-20 token representing fractional claims on slot lease income
 /// routed through a Special Purpose Vehicle under a Revenue Participation
-/// Agreement with Meridian Airways. Deployed on Sepolia testnet.
-
+/// Agreement with Zafima Airways. Deployed on Sepolia testnet.
 contract HSLIT is ERC20, Ownable {
-
     string public description =
         "HSLIT: Heathrow Slot Lease Income Token. "
         "Represents fractional claims on slot lease income routed through "
-        "an SPV under a Revenue Participation Agreement with Meridian Airways.";
+        "an SPV under a Revenue Participation Agreement with Zafima Airways.";
 
     address public servicer;
 
@@ -34,13 +32,16 @@ contract HSLIT is ERC20, Ownable {
         _;
     }
 
-    /// @notice Update the servicer address (governance function)
+    /// @notice Update the servicer address. Uses onlyOwner as a testnet
+    /// simplification; the full design specifies majority token-holder vote.
     function updateServicer(address newServicer) external onlyOwner {
         emit ServicerUpdated(servicer, newServicer);
         servicer = newServicer;
     }
 
-    /// @notice Called by servicer to log a verified income distribution event
+    /// @notice Called by servicer to log a verified income distribution event.
+    /// Testnet implementation emits an event only; production deployment would
+    /// integrate USDC transfers to holders pro-rata via push or pull mechanism.
     function distribute(uint256 amount) external onlyServicer {
         emit IncomeDistributed(amount);
     }
