@@ -26,7 +26,7 @@ contract HSLIT is ERC20, Ownable {
         Ownable(msg.sender)
     {
         servicer = initialServicer;
-        _mint(msg.sender, 10_000_000 * 10 ** decimals());
+        _mint(msg.sender, 3_750_000 * 10 ** decimals());
     }
 
     modifier onlyServicer() {
