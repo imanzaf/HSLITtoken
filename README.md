@@ -10,7 +10,7 @@ HSLIT tokenises the lease income rights derived from airport landing slots at Lo
 
 - **Token name:** Heathrow Slot Lease Income Token
 - **Symbol:** HSLIT
-- **Total supply:** 10,000,000 HSLIT (fixed at deployment)
+- **Total supply:** 3,750,000 HSLIT (fixed at deployment)
 - **Standard:** ERC-20 (OpenZeppelin)
 - **Network:** Ethereum Sepolia Testnet
 - **Contract address:** `0xD0Aa30C74D3E2847Ddde3a163A3c53537a7040e9`
